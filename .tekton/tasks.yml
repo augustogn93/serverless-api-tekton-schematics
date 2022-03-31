@@ -33,9 +33,9 @@ spec:
           echo "Cloning git repository"
           # get the right repo and branch
           if [ -z $GIT_BRANCH ]; then
-            git clone -q $GIT_REPO .
+            git clone $GIT_REPO .
           else
-            git clone -q -b $GIT_BRANCH $GIT_REPO .
+            git clone -b $GIT_BRANCH $GIT_REPO .
           fi
 ---
 apiVersion: tekton.dev/v1beta1
