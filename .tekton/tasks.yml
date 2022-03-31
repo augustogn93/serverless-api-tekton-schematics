@@ -69,6 +69,8 @@ spec:
       args:
         - |
           cd /working
+          git log --format= -n 1 --name-only
+          echo $APP_FOLDER
           if git log --format= -n 1 --name-only | grep -qw $APP_FOLDER; then
             echo "Folder changed"
             echo "Installing dependencies"
