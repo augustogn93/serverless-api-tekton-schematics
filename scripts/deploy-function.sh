@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Verifying package $PACKAGE_NAME......"
+echo "Verifying package $PACKAGE_NAME....."
 
 if ibmcloud fn package list | awk 'BEGIN {FS="/"} {print $3}' | uniq | grep -qw $PACKAGE_NAME; then
     echo "Package already exist, initiating deployment"  
